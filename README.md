@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Kaur Rajbir UI Garden
 
 This is a React + Storybook UI Component Library called `kaur_rajbir_ui_garden`. It contains components like Button, Label, Text, Table, Dropdown, Radio Button, Image, Hero Image, Card, etc.
