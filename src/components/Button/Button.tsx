@@ -11,9 +11,13 @@ const StyledButton = styled.button<{ backgroundColor?: string; disabled?: boolea
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 `;
 
-export const Button = ({ label, backgroundColor, disabled }: ButtonProps) => {
+export const Button = ({ label, backgroundColor, disabled, onClick }: ButtonProps) => {
   return (
-    <StyledButton backgroundColor={backgroundColor} disabled={disabled}>
+    <StyledButton
+      backgroundColor={backgroundColor}
+      disabled={disabled}
+      onClick={disabled ? undefined : onClick}
+    >
       {label}
     </StyledButton>
   );
