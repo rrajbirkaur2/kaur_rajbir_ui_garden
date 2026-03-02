@@ -1,35 +1,35 @@
-# Stage 1: Build the React app
+# Stage 1: Build Storybook
 FROM node:20-alpine AS build
 
 # Set working directory
-WORKDIR /kaur_rajbir_ui_garden
+WORKDIR /rajbir_kaur_ui_garden
 
-# Copy package.json and package-lock.json
+# Copy package files
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Copy all source files
 COPY . .
 
-# Build the React app for production
-RUN npm run build
+# Build Storybook
+RUN npm run build-storybook
 
-# Stage 2: Serve the production build using 'serve'
+# Stage 2: Serve the Storybook build using 'serve'
 FROM node:20-alpine
 
 # Install 'serve' globally
 RUN npm install -g serve
 
 # Set working directory
-WORKDIR /kaur_rajbir_ui_garden
+WORKDIR /rajbir_kaur_ui_garden
 
-# Copy the production build from the first stage
-COPY --from=build /kaur_rajbir_ui_garden/build ./build
+# Copy the Storybook build from the first stage
+COPY --from=build /rajbir_kaur_ui_garden/storybook-static ./storybook-static
 
 # Expose port 8083
 EXPOSE 8083
 
-# Start the app using 'serve'
-CMD ["serve", "-s", "build", "-l", "8083"]
+# Start Storybook using 'serve'
+CMD ["serve", "-s", "storybook-static", "-l", "8083"]
