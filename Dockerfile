@@ -1,35 +1,17 @@
-# Stage 1: Build Storybook
-FROM node:20-alpine AS build
+FROM node:18
 
-# Set working directory
-WORKDIR /rajbir_kaur_ui_garden
+WORKDIR /kaur_rajbir_ui_garden
 
-# Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install --legacy-peer-deps
+RUN npm install
 
-# Copy all source files
 COPY . .
 
-# Build Storybook
-RUN npm run build-storybook
+RUN npm run build
 
-# Stage 2: Serve the Storybook build using 'serve'
-FROM node:20-alpine
-
-# Install 'serve' globally
 RUN npm install -g serve
 
-# Set working directory
-WORKDIR /rajbir_kaur_ui_garden
-
-# Copy the Storybook build from the first stage
-COPY --from=build /rajbir_kaur_ui_garden/storybook-static ./storybook-static
-
-# Expose port 8083
 EXPOSE 8083
 
-# Start Storybook using 'serve'
-CMD ["serve", "-s", "storybook-static", "-l", "8083"]
+CMD ["serve", "-s", "build", "-l", "8083"]
