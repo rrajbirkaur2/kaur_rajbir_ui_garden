@@ -11,6 +11,8 @@ const config: StorybookConfig = {
     "@storybook/addon-docs"
   ],
   "framework": "@storybook/react-webpack5",
-  staticDirs: ['../public'],
+  "staticDirs": [
+    "..\\public"
+  ]
 };
 export default config;

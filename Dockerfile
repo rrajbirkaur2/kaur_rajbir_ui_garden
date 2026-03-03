@@ -1,17 +1,20 @@
-FROM node:18
+# Use Node 20
+FROM node:20-alpine
 
+# Set working directory
 WORKDIR /kaur_rajbir_ui_garden
 
+# Copy package files
 COPY package*.json ./
 
+# Install dependencies
 RUN npm install
 
+# Copy all source files
 COPY . .
 
-RUN npm run build
+# Expose dev server port
+EXPOSE 6006
 
-RUN npm install -g serve
-
-EXPOSE 8083
-
-CMD ["serve", "-s", "build", "-l", "8083"]
+# Start Storybook dev server
+CMD ["npm", "run", "storybook"]

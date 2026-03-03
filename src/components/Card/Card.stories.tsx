@@ -1,7 +1,7 @@
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 import { Card } from "./Card";
-import { CardProps } from "./Card.types";
 
-export default {
+const meta: Meta<typeof Card> = {
   title: "Components/Card",
   component: Card,
   argTypes: {
@@ -11,16 +11,22 @@ export default {
   },
 };
 
-export const Default = (args: CardProps) => <Card {...args} />;
-Default.args = {
-  title: "Card Title",
-  description: "This is a sample card description.",
-  backgroundColor: "#ffffff",
+export default meta;
+
+type Story = StoryObj<typeof Card>;
+
+export const Default: Story = {
+  args: {
+    title: "Card Title",
+    description: "This is a sample card description.",
+    backgroundColor: "#ffffff",
+  },
 };
 
-export const Highlighted = (args: CardProps) => <Card {...args} />;
-Highlighted.args = {
-  title: "Highlighted Card",
-  description: "Card with a different background color",
-  backgroundColor: "#ffeebb",
+export const Highlighted: Story = {
+  args: {
+    title: "Highlighted Card",
+    description: "Card with a different background color",
+    backgroundColor: "#ffeebb",
+  },
 };

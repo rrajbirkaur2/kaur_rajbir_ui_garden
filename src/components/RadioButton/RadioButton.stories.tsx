@@ -1,7 +1,7 @@
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 import { RadioButton } from "./RadioButton";
-import { RadioButtonProps } from "./RadioButton.types";
 
-export default {
+const meta: Meta<typeof RadioButton> = {
   title: "Components/RadioButton",
   component: RadioButton,
   argTypes: {
@@ -13,18 +13,24 @@ export default {
   },
 };
 
-export const Default = (args: RadioButtonProps) => <RadioButton {...args} />;
-Default.args = {
-  name: "group1",
-  value: "option1",
-  checked: false,
-  disabled: false,
+export default meta;
+
+type Story = StoryObj<typeof RadioButton>;
+
+export const Default: Story = {
+  args: {
+    name: "group1",
+    value: "option1",
+    checked: false,
+    disabled: false,
+  },
 };
 
-export const Checked = (args: RadioButtonProps) => <RadioButton {...args} />;
-Checked.args = {
-  name: "group1",
-  value: "option1",
-  checked: true,
-  disabled: false,
+export const Checked: Story = {
+  args: {
+    name: "group1",
+    value: "option1",
+    checked: true,
+    disabled: false,
+  },
 };

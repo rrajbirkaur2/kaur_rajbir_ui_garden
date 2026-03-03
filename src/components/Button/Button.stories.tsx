@@ -1,31 +1,32 @@
-import { Button } from "./Button";
-import { ButtonProps } from "./Button.types";
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
+import {Button} from "./Button";
 
-export default {
+const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
   argTypes: {
     backgroundColor: { control: "color" },
     disabled: { control: "boolean" },
     label: { control: "text" },
-
-    onClick: {
-      action: "Button clicked",
-      table: { disable: true }, // hides the "-" from Controls
-    },
   },
 };
 
-export const Default = (args: ButtonProps) => <Button {...args} />;
-Default.args = {
-  label: "Click Me",
-  backgroundColor: "blue",
-  disabled: false,
+export default meta;
+
+type Story = StoryObj<typeof Button>;
+
+export const Default: Story = {
+  args: {
+    label: "Click Me",
+    backgroundColor: "blue",
+    disabled: false,
+  },
 };
 
-export const Disabled = (args: ButtonProps) => <Button {...args} />;
-Disabled.args = {
-  label: "Disabled",
-  backgroundColor: "grey",
-  disabled: true,
+export const Disabled: Story = {
+  args: {
+    label: "Disabled",
+    backgroundColor: "grey",
+    disabled: true,
+  },
 };

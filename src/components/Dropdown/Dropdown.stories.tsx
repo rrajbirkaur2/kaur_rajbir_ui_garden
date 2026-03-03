@@ -1,7 +1,7 @@
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 import { Dropdown } from "./Dropdown";
-import { DropdownProps } from "./Dropdown.types";
 
-export default {
+const meta: Meta<typeof Dropdown> = {
   title: "Components/Dropdown",
   component: Dropdown,
   argTypes: {
@@ -9,14 +9,20 @@ export default {
   },
 };
 
-export const Default = (args: DropdownProps) => <Dropdown {...args} />;
-Default.args = {
-  options: ["Option 1", "Option 2", "Option 3"],
-  disabled: false,
+export default meta;
+
+type Story = StoryObj<typeof Dropdown>;
+
+export const Default: Story = {
+  args: {
+    options: ["Option 1", "Option 2", "Option 3"],
+    disabled: false,
+  },
 };
 
-export const Disabled = (args: DropdownProps) => <Dropdown {...args} />;
-Disabled.args = {
-  options: ["Option 1", "Option 2", "Option 3"],
-  disabled: true,
+export const Disabled: Story = {
+  args: {
+    options: ["Option 1", "Option 2", "Option 3"],
+    disabled: true,
+  },
 };

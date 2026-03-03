@@ -30,7 +30,7 @@ git push to main
 docker build -t kaur_rajbir_coding_assignment12 .
 
 # Run the Docker container:
-docker run -d -p 8083:8083 --name kaur_rajbir_coding_assignment12 kaur_rajbir_coding_assignment12
+docker run -d -p 8083:6006 --name kaur_rajbir_coding_assignment12 kaur_rajbir_coding_assignment12
 
 # Open your browser and go to:
 http://127.0.0.1:8083

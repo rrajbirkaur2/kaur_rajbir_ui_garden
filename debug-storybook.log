@@ -1,39 +1,55 @@
-[01:19:58.790] [INFO] storybook v10.2.13
-[01:19:59.298] [DEBUG] Getting package.json info for C:/Users/rajbi/kaur_rajbir_ui_garden/package.json...
-[01:19:59.341] [WARN] Could not resolve addon "@storybook/addon-actions", skipping. Is it installed?
-[01:19:59.345] [WARN] Could not resolve addon "@storybook/essentials", skipping. Is it installed?
-[01:19:59.965] [WARN] Could not resolve addon "@storybook/addon-actions", skipping. Is it installed?
-[01:19:59.966] [WARN] Could not resolve addon "@storybook/essentials", skipping. Is it installed?
-[01:20:00.420] [DEBUG] Serving static files from [36mpublic[39m at [36m/[39m
-[01:20:00.420] [INFO] Starting...
-[01:20:00.449] [WARN] No story files found for the specified pattern: [34msrc\**\*.mdx[39m
-[01:20:00.610] [DEBUG] Starting preview..
-[01:20:00.628] [INFO] Loading Webpack configuration from `node_modules\react-scripts`
-[01:20:00.628] [INFO] Removing existing JavaScript and TypeScript rules.
-[01:20:01.977] [INFO] Modifying Create React App rules.
-[01:20:01.990] [INFO] Addon-docs: using MDX3
-[01:20:02.062] [INFO] Using default Webpack5 setup
-[01:20:03.396] [DEBUG] Using tsconfig paths for react-docgen
-[01:20:08.157] [WARN] [eslint] 
-src\components\Button\Button.stories.tsx
-  [1mLine 3:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
+[14:12:23.181] [INFO] storybook v10.2.14
+[14:12:24.533] [DEBUG] Getting package.json info for C:/Users/rajbi/rajbir_kaur_ui_garden/package.json...
+[14:12:26.979] [DEBUG] Serving static files from [36mpublic[39m at [36m/[39m
+[14:12:26.980] [INFO] Starting...
+[14:12:27.051] [WARN] No story files found for the specified pattern: [34msrc\**\*.mdx[39m
+[14:12:27.566] [DEBUG] Starting preview..
+[14:12:27.607] [INFO] Loading Webpack configuration from `node_modules\react-scripts`
+[14:12:27.611] [INFO] Removing existing JavaScript and TypeScript rules.
+[14:12:30.007] [INFO] Modifying Create React App rules.
+[14:12:30.043] [INFO] Addon-docs: using MDX3
+[14:12:30.220] [INFO] Using default Webpack5 setup
+[14:12:32.708] [DEBUG] Using tsconfig paths for react-docgen
+[14:12:41.279] [WARN] export 'default' (imported as 'Button') was not found in './Button' (possible exports: Button)
+[14:12:41.279] [WARN] [eslint] 
+src\components\Card\Card.stories.tsx
+  [1mLine 4:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
+
+src\components\Dropdown\Dropdown.stories.tsx
+  [1mLine 4:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
+
+src\components\HeroImage\HeroImage.stories.tsx
+  [1mLine 4:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
+
+src\components\Img\Img.stories.tsx
+  [1mLine 4:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
+
+src\components\Label\Label.stories.tsx
+  [1mLine 4:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
+
+src\components\RadioButton\RadioButton.stories.tsx
+  [1mLine 4:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
+
+src\components\Table\Table.stories.tsx
+  [1mLine 4:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
+
+src\components\Text\Text.stories.tsx
+  [1mLine 4:1:[22m  Assign object to a variable before exporting as module default  [33m[4mimport/no-anonymous-default-export[24m[39m
 
 
-[01:20:08.158] [ERROR] Failed to build the preview
-[01:20:08.161] [WARN] Force closed preview build
-[01:20:08.162] [ERROR] [38;2;241;97;97mSB_BUILDER-WEBPACK5_0003 (WebpackCompilationError): There were problems when compiling your code with Webpack.
+[14:12:41.286] [ERROR] Failed to build the preview
+[14:12:41.289] [WARN] Force closed preview build
+[14:12:41.292] [ERROR] [38;2;241;97;97mSB_BUILDER-WEBPACK5_0003 (WebpackCompilationError): There were problems when compiling your code with Webpack.
 Run Storybook with --debug-webpack for more information.[39m
-    at starter (file:///C:/Users/rajbi/kaur_rajbir_ui_garden/node_modules/@storybook/builder-webpack5/dist/index.js:799:11)
+    at starter (file:///C:/Users/rajbi/rajbir_kaur_ui_garden/node_modules/@storybook/builder-webpack5/dist/index.js:799:11)
     at starter.next (<anonymous>)
-    at Module.start (file:///C:/Users/rajbi/kaur_rajbir_ui_garden/node_modules/@storybook/builder-webpack5/dist/index.js:857:34)
+    at Module.start (file:///C:/Users/rajbi/rajbir_kaur_ui_garden/node_modules/@storybook/builder-webpack5/dist/index.js:857:34)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
-    at async storybookDevServer (file:///C:/Users/rajbi/kaur_rajbir_ui_garden/node_modules/storybook/dist/core-server/index.js:7241:83)
-    at async buildOrThrow (file:///C:/Users/rajbi/kaur_rajbir_ui_garden/node_modules/storybook/dist/core-server/index.js:4504:12)
-    at async buildDevStandalone (file:///C:/Users/rajbi/kaur_rajbir_ui_garden/node_modules/storybook/dist/core-server/index.js:7611:66)
-    at async withTelemetry (file:///C:/Users/rajbi/kaur_rajbir_ui_garden/node_modules/storybook/dist/_node-chunks/chunk-WGZQUMPK.js:218:12)
-    at async dev (file:///C:/Users/rajbi/kaur_rajbir_ui_garden/node_modules/storybook/dist/bin/core.js:2734:3)
-    at async _Command.<anonymous> (file:///C:/Users/rajbi/kaur_rajbir_ui_garden/node_modules/storybook/dist/bin/core.js:2803:92)
-[01:20:08.164] [WARN] Broken build, fix the error above.
+    at async storybookDevServer (file:///C:/Users/rajbi/rajbir_kaur_ui_garden/node_modules/storybook/dist/core-server/index.js:7241:83)
+    at async buildOrThrow (file:///C:/Users/rajbi/rajbir_kaur_ui_garden/node_modules/storybook/dist/core-server/index.js:4504:12)
+    at async buildDevStandalone (file:///C:/Users/rajbi/rajbir_kaur_ui_garden/node_modules/storybook/dist/core-server/index.js:7611:66)
+    at async withTelemetry (file:///C:/Users/rajbi/rajbir_kaur_ui_garden/node_modules/storybook/dist/_node-chunks/chunk-DTZLXIO2.js:218:12)
+    at async dev (file:///C:/Users/rajbi/rajbir_kaur_ui_garden/node_modules/storybook/dist/bin/core.js:2734:3)
+    at async _Command.<anonymous> (file:///C:/Users/rajbi/rajbir_kaur_ui_garden/node_modules/storybook/dist/bin/core.js:2804:92)
+[14:12:41.295] [WARN] Broken build, fix the error above.
 You may need to refresh the browser.
-[01:20:08.169] [WARN] Could not resolve addon "@storybook/addon-actions", skipping. Is it installed?
-[01:20:08.170] [WARN] Could not resolve addon "@storybook/essentials", skipping. Is it installed?
