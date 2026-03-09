@@ -15,6 +15,3 @@ COPY . .
 
 # Expose dev server port
 EXPOSE 6006
-
-# Start Storybook dev server
-CMD ["npm", "run", "storybook"]
