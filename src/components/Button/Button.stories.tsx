@@ -8,6 +8,7 @@ const meta: Meta<typeof Button> = {
     backgroundColor: { control: "color" },
     disabled: { control: "boolean" },
     label: { control: "text" },
+    onClick: { action: "button-clicked" },
   },
 };
 

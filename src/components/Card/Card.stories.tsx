@@ -27,6 +27,6 @@ export const Highlighted: Story = {
   args: {
     title: "Highlighted Card",
     description: "Card with a different background color",
-    backgroundColor: "#ffeebb",
+    backgroundColor: "#615d50",
   },
 };
