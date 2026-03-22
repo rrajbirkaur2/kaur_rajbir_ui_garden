@@ -1,6 +1,6 @@
-import React from "react";
-import { TableCell } from "./TableCell";
-import { TableRowProps } from "./Table.types";
+import React from 'react';
+import { TableCell } from './TableCell';
+import { TableRowProps } from './Table.types';
 
 export const TableRow = ({ cells }: TableRowProps) => {
   return (

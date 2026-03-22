@@ -1,17 +1,28 @@
-import React from "react";
-import styled from "styled-components";
-import { ButtonProps } from "./Button.types";
+import React from 'react';
+import styled from 'styled-components';
+import { ButtonProps } from './Button.types';
 
-const StyledButton = styled.button<{ backgroundColor?: string; disabled?: boolean }>`
+const StyledButton = styled.button<{
+  backgroundColor?: string;
+  disabled?: boolean;
+}>`
   background-color: ${(props) =>
-    props.disabled ? "gray" : props.backgroundColor || "blue"};
+    props.disabled ? 'gray' : props.backgroundColor || 'blue'};
   color: white;
   padding: 10px 16px;
   border: none;
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
-export const Button = ({ label, backgroundColor, disabled, onClick }: ButtonProps) => {
+export const Button = ({
+  label,
+  backgroundColor,
+  disabled,
+  onClick,
+}: ButtonProps) => {
+  const test= "hello"
+console.log(test)
+
   return (
     <StyledButton
       backgroundColor={backgroundColor}

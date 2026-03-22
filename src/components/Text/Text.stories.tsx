@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Text } from "./Text";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Text } from './Text';
 
 const meta: Meta<typeof Text> = {
-  title: "Components/Text",
+  title: 'Components/Text',
   component: Text,
   argTypes: {
-    content: { control: "text" },
-    color: { control: "color" },
-    fontSize: { control: "text" },
+    content: { control: 'text' },
+    color: { control: 'color' },
+    fontSize: { control: 'text' },
   },
 };
 
@@ -17,16 +17,16 @@ type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
   args: {
-    content: "Sample Text",
-    color: "#000000",
-    fontSize: "16px",
+    content: 'Sample Text',
+    color: '#000000',
+    fontSize: '16px',
   },
 };
 
 export const Highlighted: Story = {
   args: {
-    content: "Highlighted Text",
-    color: "#ff0000",
-    fontSize: "18px",
+    content: 'Highlighted Text',
+    color: '#ff0000',
+    fontSize: '18px',
   },
 };

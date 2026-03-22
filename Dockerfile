@@ -1,17 +1,22 @@
-# Use Node 20
-FROM node:20-alpine
+# Step 1: Build Storybook
+FROM node:20-alpine AS build
 
-# Set working directory
-WORKDIR /kaur_rajbir_ui_garden
+WORKDIR /kaur_rajbir_ui_garden_build_checks
 
-# Copy package files
 COPY package*.json ./
 
-# Install dependencies
 RUN npm install
 
-# Copy all source files
 COPY . .
 
-# Expose dev server port
-EXPOSE 6006
+RUN npm run build-storybook
+
+
+# Step 2: Serve with nginx
+FROM nginx:alpine
+
+COPY --from=build /kaur_rajbir_ui_garden_build_checks/storybook-static /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { TableHeaderProps } from "./Table.types";
+import React from 'react';
+import styled from 'styled-components';
+import { TableHeaderProps } from './Table.types';
 
 const Th = styled.th`
   border: 1px solid #ccc;

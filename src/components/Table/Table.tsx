@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { TableHeader } from "./TableHeader";
-import { TableRow } from "./TableRow";
-import { TableFooter } from "./TableFooter";
-import { TableProps } from "./Table.types";
+import React from 'react';
+import styled from 'styled-components';
+import { TableHeader } from './TableHeader';
+import { TableRow } from './TableRow';
+import { TableFooter } from './TableFooter';
+import { TableProps } from './Table.types';
 
 const StyledTable = styled.table`
   border-collapse: collapse;

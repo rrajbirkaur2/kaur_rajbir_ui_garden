@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { TableCellProps } from "./Table.types";
+import React from 'react';
+import styled from 'styled-components';
+import { TableCellProps } from './Table.types';
 
 const Td = styled.td`
   border: 1px solid #ccc;

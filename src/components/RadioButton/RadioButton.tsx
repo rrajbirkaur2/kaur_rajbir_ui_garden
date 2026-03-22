@@ -1,5 +1,5 @@
-import React from "react";
-import { RadioButtonProps } from "./RadioButton.types";
+import React from 'react';
+import { RadioButtonProps } from './RadioButton.types';
 
 export const RadioButton = ({
   name,
