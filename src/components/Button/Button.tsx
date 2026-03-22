@@ -20,9 +20,6 @@ export const Button = ({
   disabled,
   onClick,
 }: ButtonProps) => {
-  const test= "hello"
-console.log(test)
-
   return (
     <StyledButton
       backgroundColor={backgroundColor}
