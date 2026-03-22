@@ -87,7 +87,7 @@ Run all tests:
 
     npm test -- --watchAll=false / npm test then press a for all tests of all the components
 
-## Demo Workflow
+## Workflow
 
 1. Husky Pre-Commit Hooks
 
@@ -107,7 +107,7 @@ Husky will block the commit, showing errors from Prettier/ESLint or failing test
 
 2. GitHub Actions CI/CD
 
-Even if a commit is bypassed (for demo purposes):
+Even if a commit is bypassed:
 
 git commit --no-verify -m "Force broken code commit"
 git push origin main
