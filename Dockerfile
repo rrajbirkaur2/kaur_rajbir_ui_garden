@@ -17,6 +17,6 @@ FROM nginx:alpine
 
 COPY --from=build /kaur_rajbir_ui_garden_build_checks/storybook-static /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 8018
 
 CMD ["nginx", "-g", "daemon off;"]
